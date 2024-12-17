@@ -1,4 +1,6 @@
-﻿namespace VentCalcWpfApp
+﻿using System.ComponentModel;
+
+namespace VentCalcWpfApp
 {
     public class RowVentilationData
     {
