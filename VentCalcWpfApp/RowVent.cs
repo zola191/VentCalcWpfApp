@@ -30,5 +30,66 @@ namespace VentCalcWpfApp
         private double localResistanceLoss;
 
         public double TotalPressureLoss => dynamicPressureLoss + localResistanceLoss;
+
+        public double? Radius
+        {
+            get => (duct as RoundDuct)?.Radius;
+            set
+            {
+                if (value.HasValue)
+                {
+                    if (duct is RectangularDuct rectangularDuct)
+                    {
+                        rectangularDuct.Width = 0;
+                        rectangularDuct.Height = 0;
+                    }
+                }
+                if (duct is RoundDuct roundDuct)
+                {
+                    roundDuct.Diameter = value.Value * 2;
+                }
+                OnPropertyChanged();
+            }
+        }
+
+        public double? Width
+        {
+            get => (duct as RectangularDuct)?.Width;
+            set
+            {
+                if (value.HasValue)
+                {
+                    if (duct is RoundDuct roundDuct)
+                    {
+                        roundDuct.Diameter = 0;
+                    }
+                }
+                if (duct is RectangularDuct rectangularDuct)
+                {
+                    rectangularDuct.Width = value ?? 0;
+                }
+                OnPropertyChanged();
+            }
+        }
+
+        public double? Height
+        {
+            get => (duct as RectangularDuct)?.Height;
+            set
+            {
+                if (value.HasValue)
+                {
+                    if (duct is RoundDuct roundDuct)
+                    {
+                        roundDuct.Diameter = 0;
+                    }
+                }
+                if (duct is RectangularDuct rectangularDuct)
+                {
+                    rectangularDuct.Height = value ?? 0;
+                }
+                OnPropertyChanged();
+            }
+        }
     }
 }

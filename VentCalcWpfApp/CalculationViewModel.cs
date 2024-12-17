@@ -11,8 +11,8 @@ namespace VentCalcWpfApp
         {
             VentilationDataRows = new ObservableCollection<RowVent>
             {
-                new RowVent {SectionNumber = 1,AirFlow=500,Length=5},
-                new RowVent {SectionNumber = 2, AirFlow=700,Length=10 },
+                new RowVent {SectionNumber = 1,AirFlow = 500, Length = 5},
+                new RowVent {SectionNumber = 2, AirFlow = 700, Length = 10 },
             };
         }
 

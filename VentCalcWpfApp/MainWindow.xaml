@@ -57,41 +57,32 @@
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch">
                     <DataGrid.Columns>
-                        <!-- Номер участка -->
                         <DataGridTextColumn Header="Номер участка" 
                                     Binding="{Binding SectionNumber}" />
 
-                        <!-- Расход воздуха м³/ч -->
                         <DataGridTextColumn Header="Расход воздуха м³/ч" 
                                     Binding="{Binding AirFlow}" />
 
-                        <!-- Длина (м) -->
                         <DataGridTextColumn Header="Длина (м)" 
                                     Binding="{Binding Length}" />
-
-                        <!-- Скорость (м/с) -->
+                        <DataGridTextColumn Header="Радиус, мм" 
+                                            Binding="{Binding Radius}" />
+                        <DataGridTextColumn Header="Ширина, мм" 
+                                            Binding="{Binding Width}" />
+                        <DataGridTextColumn Header="Высота, мм" 
+                                            Binding="{Binding Height}" />
                         <DataGridTextColumn Header="Скорость (м/с)" 
                                     Binding="{Binding CalculatedVelocity}" 
                                     IsReadOnly="True" />
-
-                        <!-- Сопротивление (Па/м) -->
                         <DataGridTextColumn Header="Сопротивление (Па/м)" 
                                     Binding="{Binding ResistancePerMeter}" 
                                     IsReadOnly="True" />
-
-                        <!-- Коэффициент местного сопротивления -->
                         <DataGridTextColumn Header="КМС" 
                                     Binding="{Binding LocalResistanceCoefficient}" />
-
-                        <!-- Потери от динамического давления -->
                         <DataGridTextColumn Header="Потери динамического давления (Па)" 
                                     Binding="{Binding DynamicPressureLoss}" />
-
-                        <!-- Потери от местных сопротивлений -->
                         <DataGridTextColumn Header="Потери местных сопротивлений (Па)" 
                                     Binding="{Binding LocalResistanceLoss}" />
-
-                        <!-- Общие потери давления (Па) -->
                         <DataGridTextColumn Header="Общие потери давления (Па)" 
                                     Binding="{Binding TotalPressureLoss}" 
                                     IsReadOnly="True" />

@@ -15,7 +15,7 @@
 
         public override double GetArea()
         {
-            return Math.PI * Radius * Radius;
+            return Math.PI * Radius /1000 * Radius/1000;
         }
     }
 }
